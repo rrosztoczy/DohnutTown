@@ -1,0 +1,32 @@
+<%= form_with(model: dohnut, local: true) do |form| %>
+  <% if dohnut.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dohnut.errors.count, "error") %> prohibited this dohnut from being saved:</h2>
+
+      <ul>
+      <% dohnut.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :flavor %>
+    <%= form.text_area :flavor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_area :size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sprinkles %>
+    <%= form.check_box :sprinkles %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

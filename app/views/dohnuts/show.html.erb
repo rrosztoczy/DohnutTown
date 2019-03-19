@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Flavor:</strong>
+  <%= @dohnut.flavor %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @dohnut.size %>
+</p>
+
+<p>
+  <strong>Sprinkles:</strong>
+  <%= @dohnut.sprinkles %>
+</p>
+
+<p>
+  <strong>RYAN:</strong>
+  <%= @dohnut.ryan_name %>
+</p>
+
+<%= link_to 'Edit', edit_dohnut_path(@dohnut) %> |
+<%= link_to 'Back', dohnuts_path %>
